@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Shoe</title>
+    <link rel="stylesheet" href="css/addshoe.css"> <!-- Add CSS styling if needed -->
+</head>
+<body>
+    <h1>Add Shoe</h1>
+    <form id="addShoeForm" enctype="multipart/form-data">
+        <label for="shoeImage">Upload Image:</label>
+        <input type="file" id="shoeImage" name="shoeImage" accept="image/*" required />
+
+        <label for="shoeTitle">Title:</label>
+        <input type="text" id="shoeTitle" name="shoeTitle" required />
+
+        <label for="shoeBrand">Brand:</label>
+        <input type="text" id="shoeBrand" name="shoeBrand" required />
+
+        <label for="shoeSize">Size:</label>
+        <input type="text" id="shoeSize" name="shoeSize" required />
+
+        <label for="shoeColor">Color:</label>
+        <input type="text" id="shoeColor" name="shoeColor" required />
+
+        <label for="shoePrice">Price:</label>
+        <input type="text" id="shoePrice" name="shoePrice" required />
+
+        <input type="submit" value="Add to Shop" />
+    </form>
+
+    <script>
+        document.getElementById("addShoeForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Collect form data
+            const formData = new FormData(this);
+
+            // Create a new product listing with the form data
+            const productListing = {
+                image: formData.get("shoeImage"),
+                title: formData.get("shoeTitle"),
+                brand: formData.get("shoeBrand"),
+                size: formData.get("shoeSize"),
+                color: formData.get("shoeColor"),
+                price: formData.get("shoePrice")
+            };
+
+            // Display the product listing on the shop page (you'll need JavaScript for this)
+            // You can append it to a list of products on the shop page, for example.
+
+            // Optionally, you can also store the product data in an array or a JSON file
+            // for later retrieval and display on the shop page.
+
+            // Reset the form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
