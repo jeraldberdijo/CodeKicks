@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Add Shoe</title>
-    <link rel="stylesheet" href="css/addshoe.css"> <!-- Add CSS styling if needed -->
+    <link rel="stylesheet" href="css/addshoe.css"> 
 </head>
 <body>
     <h1>Add Shoe</h1>
@@ -35,7 +35,7 @@
             // Collect form data
             const formData = new FormData(this);
 
-            // Create a new product listing with the form data
+            
             const productListing = {
                 image: formData.get("shoeImage"),
                 title: formData.get("shoeTitle"),
@@ -45,13 +45,7 @@
                 price: formData.get("shoePrice")
             };
 
-            // Display the product listing on the shop page (you'll need JavaScript for this)
-            // You can append it to a list of products on the shop page, for example.
-
-            // Optionally, you can also store the product data in an array or a JSON file
-            // for later retrieval and display on the shop page.
-
-            // Reset the form
+           
             this.reset();
         });
     </script>
